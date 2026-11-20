@@ -166,7 +166,7 @@ const EditorPage = () => {
       const updatedBookData = response.data.book || response.data;
       let rawCoverPath = updatedBookData.coverImage || "";
 
-      const BACKEND_BASE_URL = "http://localhost:8000"; 
+      const BACKEND_BASE_URL = import.meta.env.VITE_API_URL;
 
       const finalCoverUrl = rawCoverPath.startsWith("http")
         ? rawCoverPath

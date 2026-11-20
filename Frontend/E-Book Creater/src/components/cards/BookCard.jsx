@@ -4,7 +4,7 @@ import { Edit, Trash2 } from 'lucide-react';
 const BookCard = ({ book, onDelete }) => {
   const navigate = useNavigate();
 
-  const BASE_URL = "http://localhost:8000"; 
+  const BASE_URL = import.meta.env.VITE_API_URL;
   const rawCover = book.coverImage || book.coverImageUrl || book.image || "";
   
   // Yeh logic handle karega ki path relative hai ya full URL
