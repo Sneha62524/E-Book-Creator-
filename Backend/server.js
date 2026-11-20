@@ -11,6 +11,14 @@ const exportRoutes = require("./routes/exportRoutes");
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "AI BookStudio Backend is running!",
+    database: "Connected"
+  });
+});
+
 //middleware to handle CORS
 app.use(
     cors({
